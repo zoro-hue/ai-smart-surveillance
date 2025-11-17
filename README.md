@@ -1,16 +1,74 @@
+🧠 AI Smart Surveillance
 
-Overview
+An intelligent, real-time surveillance system powered by computer vision and machine learning.
+This project detects people, vehicles, and unusual activity in live video feeds using advanced deep-learning models.
 
-This project implements a face recognition-based attendance system using OpenCV and Python. It detects faces in real-time from a webcam feed, matches them against a database of known faces, and retrieves their corresponding status (e.g., Hosteller or Day Scholar). The system sends email notifications for each non hosteler or unknown person detected individual.
+📌 Overview
 
-Features
+AI Smart Surveillance is designed to enhance traditional CCTV systems by making them automated, accurate and smart.
+Instead of passively recording, this system:
 
-Real-time face detection using OpenCV's Haar cascades.
+Detects objects (people, cars, bikes, etc.)
 
-Face recognition using template matching (Local Binary Patterns Histogram - LBPH can also be used).
+Tracks movements
 
-Metadata integration to associate each face with a name and status.
+Triggers alerts for suspicious activities
 
-Logs attendance with timestamps and camera details.
+Saves snapshots/clips
 
-Sends email notifications for each non-hosteler detection.
+Works with webcam, CCTV camera (RTSP), or video files
+
+You can use it for home surveillance, shop security, parking monitoring, and smart-city applications.
+
+✨ Features
+
+🎯 Real-time object detection (YOLO, MobileNet, or custom models)
+
+🚶 Person & vehicle tracking using SORT/DeepSORT
+
+🚨 Alert system (email/SMS/desktop alerts)
+
+🎥 Supports multiple input sources:
+
+Webcam
+
+CCTV IP camera (RTSP)
+
+Local video files
+
+💾 Auto-save snapshots and event logs
+
+🧩 Modular code — plug in your own models or logic
+
+🔋 GPU support for faster inference (optional)
+
+⚡ Lightweight enough for edge devices (Raspberry Pi)
+
+🏗️ System Architecture
+
+          ┌──────────────────────────────┐
+          │          Input Source        │
+          │ Webcam / Video / RTSP Stream │
+          └───────────────┬──────────────┘
+                          ↓
+               ┌────────────────────────┐
+               │     Pre-processing     │
+               └───────────────┬────────┘
+                              ↓
+                   ┌──────────────────┐
+                   │  Object Detector │  ← YOLO / SSD
+                   └───────┬──────────┘
+                           ↓
+                  ┌────────────────────┐
+                  │ Tracking & Rules   │ ← SORT / DeepSORT
+                  └────────┬───────────┘
+                           ↓
+           ┌──────────────────────────────────────┐
+           │ Alerts │ Saving │ Logging │ Monitoring│
+           └──────────────────────────────────────┘
+
+
+
+
+
+
